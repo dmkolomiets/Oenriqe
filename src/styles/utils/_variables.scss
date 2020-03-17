@@ -1,0 +1,36 @@
+//Path
+
+$path-fonts: '../fonts/';
+$path-img: '../images/';
+
+//Fonts
+$roboto: 'Roboto';
+
+$font-primary: $roboto, sans-serif;
+
+//Colors
+$black: #000;
+$grey: #262626;
+$white: #fff;
+$green: #008843;
+$yellow: #fde835;
+
+$primary: $green;
+$secondary: $yellow;
+$color-text: $grey;
+$color-inverse: $white;
+
+//Default settings
+$default-font-family: $font-primary;
+$default-font-size: 16px;
+$default-line-height: 1.2;
+$default-font-weight: 400;
+$default-font-style: normal;
+
+$transition-time: .3s;
+
+//body
+$body-bg: $white;
+
+//header
+$header-color: #fff;

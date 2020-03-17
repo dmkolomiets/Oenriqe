@@ -1,0 +1,146 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    position: relative;
+    font: #{$default-font-weight} #{$default-font-style} #{$default-font-size} / #{$default-line-height} #{$default-font-family};
+    color: $color-text;
+    background-color: $body-bg;
+    min-width: 320px;
+}
+
+.layout {
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+a {
+    color: inherit;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+.title-wrap {
+    position: relative;
+    padding-bottom: 30px;
+
+    &:after {
+        content: '';
+        @include pos-a-l-b(50%, 0);
+        transform: translateX(-50%);
+        @include size(230px, 1px);
+        background-color: $primary;
+    }
+
+    &:before {
+        content: '';
+        @include pos-a-l-b(calc(50% - 100px), 0);
+        transform: translateX(-50%);
+        @include size(30px, 1px);
+        background-color: $secondary;
+        z-index: 1;
+    }
+}
+
+h2,
+.h2 {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    line-height: 42px;
+    font-size: 36px;
+    font-weight: 300;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 42px;
+    }
+
+    &:before {
+        content: '';
+        @include pos-a-l-t(-12px, -12px);
+        @include size(12px, 12px);
+        background-color: $primary;
+    }
+
+    &.inverse {
+        color: #fff;
+
+        &:before {
+            background: $secondary;
+        }
+    }
+}
+
+h3,
+.h3 {
+    font-weight: 400;
+    font-size: 30px;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 36px;
+    }
+
+    &.inverse {
+        color: #fff;
+    }
+}
+
+.sub-title {
+    font-size: 30px;
+    font-weight: 100;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 36px;
+    }
+
+    &.inverse {
+        color: $secondary;
+    }
+
+    &.small {
+        font-size: 16px;
+    }
+}
+
+strong {
+    font-weight: 900;
+}
+
+.main-logo {
+    display: inline-block;
+    width: 80px;
+
+    @include media-breakpoint-up(lg) {
+        width: 104px;
+    }
+
+    img {
+        @include size(100%, auto);
+    }
+}
+
+.toTop {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    background-image: url(#{$path-img}to-top.png);
+    @extend %bgCover;
+    @include size(54px, 55px);
+    opacity: .8;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity $transition-time;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @include media-breakpoint-up(lg) {
+        right: 100px;
+    }
+}

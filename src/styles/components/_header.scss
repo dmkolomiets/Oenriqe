@@ -1,0 +1,221 @@
+.main-header {
+    @include pos-a-l-t(0, 0);
+    width: 100%;
+    color: $header-color;
+    font-size: 12px;
+    z-index: 2;
+
+    .main-logo {
+        margin-top: 20px;
+
+        @include media-breakpoint-up(sm) {
+            margin-right: 23px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-right: 53px;
+        }
+    }
+
+    .header-top-row {
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(0, 136, 67, .2);
+
+        @include media-breakpoint-up(sm) {
+            padding: 16px 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            min-width: 833px;
+        }
+    }
+
+    .header-bottom-row {
+        padding-top: 10px;
+
+        @include media-breakpoint-up(sm) {
+            padding-top: 20px;
+        }
+    }
+
+    .language-block {
+        margin-left: 20px;
+        width: 50px;
+        height: 44px;
+        line-height: 44px;
+        background-color: rgba(0, 136, 67, .5);
+        text-align: center;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(sm) {
+            width: 90px;
+            height: 64px;
+            line-height: 64px;
+        }
+
+        span {
+            position: relative;
+
+            &:after {
+                content: '';
+                position: relative;
+                top: -3px;
+                margin-left: 5px;
+                display: inline-block;
+                border: 3px solid transparent;
+                border-bottom: 3px solid #fff;
+                border-left: 3px solid #fff;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+.tel-wrap {
+    background: url(#{$path-img}phone.png) no-repeat left center;
+    background-size: 14px, 14px;
+    margin-bottom: 15px;
+    padding-left: 26px;
+
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 0;
+    }
+
+    .tel {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        white-space: nowrap;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 24px;
+        }
+    }
+
+    .tel-text {
+        text-decoration: underline;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+}
+
+.header-icon {
+    margin-right: 5px;
+
+    @include media-breakpoint-up(lg) {
+        margin-right: 12px;
+    }
+}
+
+.social-links-nav {
+    @extend %clear-list;
+
+    li {
+
+        &:not(:last-of-type) {
+            margin-right: 11px;
+        }
+
+        a {
+            display: inline-block;
+            @include circle(24px);
+            border: 1px solid #fff;
+            text-align: center;
+            line-height: 24px;
+            font-size: 14px;
+            transition: color $transition-time;
+
+            &:hover {
+                color: #b1b1b1;
+            }
+        }
+    }
+}
+
+.header-nav {
+    @extend %clear-list;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 20px 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 0;
+    }
+
+    li {
+        margin: 15px;
+
+        @include media-breakpoint-up(lg) {
+            margin: 0;
+
+            &:not(:last-child) {
+                margin-right: 50px;
+            }
+        }
+
+        a {
+            padding-bottom: 5px;
+
+            &:hover {
+                text-decoration: none;
+                border-bottom: 2px solid #fde835;
+            }
+        }
+    }
+}
+
+
+
+.navbar {
+    z-index: 10;
+    padding: 0;
+    @include pos-a-r-t(0, 0);
+    width: 100%;
+    background: #fff;
+    color: $color-text;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+        position: static;
+        background: none;
+        color: inherit;
+        width: auto;
+    }
+}
+
+.navbar-toggler {
+    z-index: 15;
+
+    &:focus {
+        outline: none;
+    }
+
+    .times {
+        display: inline-block;
+        color: $primary;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    &.collapsed {
+
+        .times {
+            color: $primary;
+            display: none;
+        }
+
+        .burger {
+            display: inline;
+        }
+    }
+}
+
+.navbar-toggler-icon {
+    color: #fff;
+}

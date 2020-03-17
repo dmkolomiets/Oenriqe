@@ -1,0 +1,109 @@
+.form {
+    margin: 42px 0;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #0b9e53;
+
+    @include media-breakpoint-up(xl) {
+        margin: 82px 0 100px;
+        padding: 0 90px 54px;
+    }
+
+    .button-submit {
+        min-width: 281px;
+    }
+}
+
+.input-wrap {
+    margin-bottom: 46px;
+}
+
+.form-control {
+    @include size(281px, 50px);
+    line-height: 50px;
+    box-shadow: 0 20px 40px #144f30;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    padding: 0 17px;
+
+    &:focus {
+        outline: none;
+        border: none;
+        box-shadow: 0 20px 40px #144f30;
+    }
+
+    &.inverse {
+        background: transparent;
+        border: 1px solid #30d883;
+        box-shadow: none;
+        color: #30d883;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &::-webkit-input-placeholder {
+            color: #30d883;
+        }
+        &:-moz-placeholder {
+            color: #30d883;
+        }
+    }
+
+    &::-webkit-input-placeholder {
+        color: #a8abb3;
+    }
+    &:-moz-placeholder {
+        color: #a8abb3;
+    }
+}
+
+.label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $secondary;
+
+    .info {
+        display: inline-block;
+        margin-left: 6px;
+        vertical-align: sub;
+        @include size(18px, 18px);
+        background-image: url(#{$path-img}information.png);
+        @extend %bgCover;
+    }
+}
+
+
+.checkbox {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    @include size(17px, 17px);
+}
+.checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+.checkbox:not(checked) + label {
+    position: relative;
+    padding: 0 0 0 28px;
+    display: block;
+    margin: 20px 0 0;
+    color: #fff;
+}
+.checkbox:not(checked) + label:after {
+    content: '';
+    @include pos-a-l-t(0, 3px);
+    @include size(18px, 18px);
+    border: 2px solid #fff;
+}
+.checkbox:checked + label:after {
+    border: none;
+    background-image: url(#{$path-img}check-box.png);
+    @extend %bgCover;
+}
+
+.button-submit {
+    height: 50px;
+    line-height: 50px;
+}
