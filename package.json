@@ -39,6 +39,7 @@
   "private": true,
   "homepage": "https://bitbucket.org/projestic/gulp-sass#readme",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "gulp-install": "^1.1.0"
   }
 }

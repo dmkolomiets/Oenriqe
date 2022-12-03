@@ -1,0 +1,94 @@
+.corousel {
+    margin: 57px auto 0;
+    width: 955px;
+    height: 349px;
+    border: 1px solid #212121;
+
+    .wraper {
+        margin-top: 82px;
+        display: flex;
+        justify-content: center;
+
+        .photo-wraper {
+            width: 159px;
+            height: 159px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .descr {
+            width: 569px;
+            margin-left: 21px;
+
+            .name {
+                opacity: 0.9;
+                color: #212121;
+                font-size: 30px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            .position {
+                opacity: 0.9;
+                color: #212121;
+                font-size: 12px;
+                margin-top: 9px;
+                text-transform: uppercase;
+            }
+
+            .feedback {
+                margin-top: 20px;
+                opacity: 0.6;
+                color: #212121;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 22px;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+    .slider-dots {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+    }
+
+    .slider-dots .dot {
+        cursor: pointer;
+        width: 13px;
+        height: 13px;
+        border: 1px solid #212121;
+        margin: 0 10px;
+        display: inline-block;
+    }
+
+    .slider-dots .dot-active {
+        background-color: #000;
+        width: 13px;
+        height: 13px;
+    }
+
+    .fade {
+        opacity: 1;
+        animation-name: fade;
+        animation-duration: 2.5s;
+        
+      }
+      
+      @keyframes fade {
+        from {
+          opacity: 0.1;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+}

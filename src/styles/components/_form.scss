@@ -1,109 +1,59 @@
 .form {
-    margin: 42px 0;
-    padding-bottom: 34px;
-    border-bottom: 1px solid #0b9e53;
+    text-align: center;
+    margin: 70px auto 0;
+    width: 828px;
 
-    @include media-breakpoint-up(xl) {
-        margin: 82px 0 100px;
-        padding: 0 90px 54px;
+    input {
+        width: 370px;
+        height: 57px;
+        background-color: #ffffff;
+        margin: 0 12px;
     }
 
-    .button-submit {
-        min-width: 281px;
-    }
-}
-
-.input-wrap {
-    margin-bottom: 46px;
-}
-
-.form-control {
-    @include size(281px, 50px);
-    line-height: 50px;
-    box-shadow: 0 20px 40px #144f30;
-    border-radius: 5px;
-    border: none;
-    background-color: #fff;
-    padding: 0 17px;
-
-    &:focus {
-        outline: none;
-        border: none;
-        box-shadow: 0 20px 40px #144f30;
+    textarea {
+        margin: 29px 0 0;
+        width: 768px;
+        height: 207px;
+        background-color: #ffffff;
+        resize: none;
     }
 
-    &.inverse {
-        background: transparent;
-        border: 1px solid #30d883;
-        box-shadow: none;
-        color: #30d883;
+    textarea, input[placeholder] {
+        
+        background-color: #ffffff;
+        color: #212121;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 67px;
+        letter-spacing: 0.96px;
+        padding-left: 10px;
+        text-overflow:ellipsis;
 
-        &:focus {
-            box-shadow: none;
-        }
-
-        &::-webkit-input-placeholder {
-            color: #30d883;
-        }
-        &:-moz-placeholder {
-            color: #30d883;
+        &:focus::placeholder {
+            color: transparent
         }
     }
 
-    &::-webkit-input-placeholder {
-        color: #a8abb3;
+    .send-btn {
+        cursor: pointer;
+        margin-top: 30px;
+        background-color: #fff;
+        padding-right: 30px;
+        width: 123px;
+        height: 50px;
+        box-shadow: 0 18px 27px 2px rgba(0, 0, 0, 0.1);
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 75px;
+            width: 13px;
+            height: 15px;
+            background: url('../images/icons/send-button.png') center/cover no-repeat 
+        }
     }
-    &:-moz-placeholder {
-        color: #a8abb3;
-    }
-}
-
-.label {
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: 700;
-    color: $secondary;
-
-    .info {
-        display: inline-block;
-        margin-left: 6px;
-        vertical-align: sub;
-        @include size(18px, 18px);
-        background-image: url(#{$path-img}information.png);
-        @extend %bgCover;
-    }
-}
 
 
-.checkbox {
-    vertical-align: top;
-    margin: 0 3px 0 0;
-    @include size(17px, 17px);
-}
-.checkbox:not(checked) {
-    position: absolute;
-    opacity: 0;
-}
-.checkbox:not(checked) + label {
-    position: relative;
-    padding: 0 0 0 28px;
-    display: block;
-    margin: 20px 0 0;
-    color: #fff;
-}
-.checkbox:not(checked) + label:after {
-    content: '';
-    @include pos-a-l-t(0, 3px);
-    @include size(18px, 18px);
-    border: 2px solid #fff;
-}
-.checkbox:checked + label:after {
-    border: none;
-    background-image: url(#{$path-img}check-box.png);
-    @extend %bgCover;
-}
-
-.button-submit {
-    height: 50px;
-    line-height: 50px;
 }

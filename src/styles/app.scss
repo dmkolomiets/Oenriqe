@@ -1,7 +1,7 @@
 @import 'utils/variables';
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
-@import '../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css';
+// @import '../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css';
 @import '../../node_modules/font-awesome-sass/assets/stylesheets/font-awesome';
 
 
@@ -11,10 +11,12 @@
 
 //components
 @import 'components/default';
+@import 'components/animation';
 @import 'components/button';
 @import 'components/form';
 @import 'components/header';
 @import 'components/footer';
+@import 'components/corousel';
 
 //templates
 @import 'templates/index';
